@@ -40,7 +40,7 @@ def add_contact(contacts):
         "phone": phone,
         "email": email
     })
-    print(PASTEL_GREEN + "✨ Contact added. You're basically a CRM now.")
+    print(PASTEL_GREEN + "✨ Contact added.")
 
 # Find the person
 def search_contact(contacts):
@@ -51,7 +51,7 @@ def search_contact(contacts):
         for i, c in enumerate(results, 1):
             print(f"{i}. {c['name']} | {c['phone']} | {c['email']}")
     else:
-        print(ERROR + "🚫 Nada. They're either not here or in your dreams.")
+        print(ERROR + "🚫 Contact Don't exist.")
 
 # Make updates 
 def update_contact(contacts):
@@ -65,9 +65,9 @@ def update_contact(contacts):
             contacts[index] = {"name": name, "phone": phone, "email": email}
             print(PASTEL_GREEN + "🔄 Updated like your Spotify Wrapped.")
         else:
-            print(ERROR + "🤡 That's not a real option, bestie.")
+            print(ERROR + "🤡 That's not a real option, brother.")
     except ValueError:
-        print(ERROR + "⚠️ We said number, not alphabet soup.")
+        print(ERROR + "⚠️ We said number, not alphabet .")
 
 # delete the contact 
 def delete_contact(contacts):
